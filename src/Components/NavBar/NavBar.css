@@ -1,0 +1,81 @@
+.nav {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ededed;
+	padding: 20px 40px;
+}
+
+.nav .logo {
+	display: block;
+	width: 150px;
+	height: auto;
+	margin-left: 50px;
+}
+
+.nav .nav-links {
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.nav .nav-link {
+	color: rgba(0, 0, 0, 0.55);
+	text-decoration: none;
+	font-family: "Roboto", sans-serif;
+}
+
+.nav .nav-active {
+	font-weight: bolder;
+	color: #191c29;
+}
+
+.nav .nav-menu {
+	display: none;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+@media (max-width: 768px) {
+	.nav {
+		padding: 10px 10px;
+	}
+
+	.nav .logo {
+		width: 110px;
+		margin-left: 0;
+	}
+
+	.nav .nav-links {
+		display: none;
+	}
+
+	.nav .nav-menu {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.nav .nav-menu span {
+		padding: 4px 10px;
+		border: 2px solid transparent;
+	}
+
+	.nav .nav-menu:focus + .nav-links {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: column;
+		grid-column: span 2 span 2;
+		gap: 20px;
+	}
+
+	.nav .nav-menu:focus {
+		pointer-events: none;
+	}
+
+	.nav .nav-menu:focus span {
+		border: 2px solid #ccc;
+	}
+}
