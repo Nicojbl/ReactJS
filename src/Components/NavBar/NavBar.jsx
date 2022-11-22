@@ -2,13 +2,14 @@ import { CartWidget } from "../CartWidget/CartWidget";
 import "./NavBar.css";
 import Menu from "../../assets/images/menu.svg";
 import Logo from "../../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
     <nav className="nav">
-      <a href="index.html">
+      <Link to="/">
         <img className="logo" src={Logo} alt="ebikes logo" />
-      </a>
+      </Link>
       <button className="nav-menu">
         <span>
           <img src={Menu} alt="menu" />
@@ -17,24 +18,24 @@ export const NavBar = () => {
       <CartWidget />
       <ul className="nav-links">
         <li>
-          <a className="nav-link nav-active" href="index.html">
+          <Link className="nav-link nav-active" to="/">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="nav-link" href="page/quienes_somos.html">
-            Quienes somos
-          </a>
+          <Link className="nav-link" to="/category/Bici">
+            Bici
+          </Link>
         </li>
         <li>
-          <a className="nav-link" href="page/contacto.html">
-            Contacto
-          </a>
+          <Link className="nav-link" to="/category/Moto">
+            Moto
+          </Link>
         </li>
         <li>
-          <a className="nav-link" href="page/iniciar_sesion.html">
-            Iniciar Sesion
-          </a>
+          <Link className="nav-link" to="/category/Monopatin">
+            Monopatin
+          </Link>
         </li>
       </ul>
     </nav>
