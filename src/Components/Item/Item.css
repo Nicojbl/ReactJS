@@ -1,0 +1,30 @@
+.items{
+    width: 300px;
+	height: 400px;
+	border-radius: 8px;
+	box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
+	transition: all 0.25s;
+	margin: 30px;
+	vertical-align: middle;
+	padding: 20px;
+}
+
+.items:hover {
+    transform: translate(14px);
+	box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.itemImg{
+    width: 270px;
+    height: 270px;
+    margin-bottom: 10px;
+}
+
+.itemName{
+    width: auto;
+    font-weight: 500;
+}
+
+.item .ItemPrice {
+    justify-content: center;
+}

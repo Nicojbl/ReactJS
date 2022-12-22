@@ -1,25 +1,21 @@
-import { useEffect, useState } from "react";
+import { useGetItem } from "../../hooks/useGetItem";
+
 import { ItemDetail } from "../ItemDetail/ItemDetail";
-import { useParams } from "react-router-dom";
-import { Mock } from "../../mocks/mock";
+import { Loading } from "../Loading/Loading";
+import "./ItemDetailContainer.css";
 
 export const ItemDetailContainer = () => {
-  const [item, setItem] = useState(null);
-  const { id } = useParams();
+  // Obtiene el producto
+  const item = useGetItem();
 
-  useEffect(() => {
-    new Promise((resolve) =>
-      setTimeout(() => resolve(Mock.find((item) => item.id === id)), 1000)
-    ).then((data) => setItem(data));
-  }, [id]);
-
+  // Si aún no se ha obtenidoe el producto, se muestra un mensaje de carga
   if (!item) {
-    return null;
+    return <Loading />;
   }
 
   return (
-    <div>
-      <ItemDetail item={item} />;
+    <div className="ItemDetailContainer">
+      <ItemDetail item={item} />
     </div>
   );
 };

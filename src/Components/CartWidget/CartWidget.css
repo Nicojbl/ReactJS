@@ -1,0 +1,25 @@
+.cartContainer{
+    display: inline-block;
+}
+
+.cart {
+    width: 30px;
+    height: 30px;
+    color: rgb(66, 101, 102);
+}
+
+.quantityCart {
+    position: absolute;
+    top: 2.1em;
+    right: 7.5em;
+    background-color: #f89d26;
+    color: white;
+    border-radius: 50%;
+    width: 1.7em;
+    height: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    font-weight: bold;
+  }

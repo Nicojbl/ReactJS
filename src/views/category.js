@@ -2,7 +2,6 @@ import { ItemListContainer } from "../Components/ItemListContainer/ItemListConta
 import { Layout } from "../Components/Layout/Layout";
 
 const CategoryView = () => {
-
   return (
     <Layout>
       <ItemListContainer />

@@ -1,0 +1,29 @@
+.itemCount {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.countButton {
+    background-color: white;
+    color: darkorange;
+    font-size: 1.5em;
+    width: 2em;
+    height: 2em;
+    border: 1px solid darkorange;
+    border-radius: 0.25em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.countButton:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+.countInput {
+    width: 3em;
+    text-align: center;
+    font-size: 1.2em;
+    border: none;
+}

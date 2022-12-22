@@ -1,0 +1,31 @@
+.trashWidget {
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+  margin-top: 3px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.trashWidget svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #212121;
+  transition: fill 0.3s ease-in-out;
+}
+
+.trashWidget:hover,
+.trashWidget:focus {
+  background-color: red;
+  color: white;
+  border: solid 0.1em white;
+}
+
+.trashWidget:hover svg,
+.trashWidget:focus svg {
+  fill: white;
+}

@@ -1,21 +1,14 @@
-import { CartWidget } from "../CartWidget/CartWidget";
-import "./NavBar.css";
-import Menu from "../../assets/images/menu.svg";
-import Logo from "../../assets/images/logo.svg";
 import { Link } from "react-router-dom";
+import { CartWidget } from "../CartWidget/CartWidget";
+import Logo from "../../assets/images/logo.svg";
+import "./NavBar.css";
 
-export const NavBar = () => {
+export const NavbarComponent = () => {
   return (
     <nav className="nav">
       <Link to="/">
         <img className="logo" src={Logo} alt="ebikes logo" />
       </Link>
-      <button className="nav-menu">
-        <span>
-          <img src={Menu} alt="menu" />
-        </span>
-      </button>
-      <CartWidget />
       <ul className="nav-links">
         <li>
           <Link className="nav-link nav-active" to="/">
@@ -38,6 +31,7 @@ export const NavBar = () => {
           </Link>
         </li>
       </ul>
+      <CartWidget />
     </nav>
   );
 };

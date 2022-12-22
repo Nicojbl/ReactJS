@@ -1,32 +1,20 @@
-import { useEffect, useState } from "react";
+import { useGetItem } from "../../hooks/useGetItem";
+
 import { ItemList } from "../ItemList/ItemList";
-import { useParams } from "react-router-dom";
-import { Mock } from "../../mocks/mock";
+import { Loading } from "../Loading/Loading";
 
 export const ItemListContainer = () => {
-  const { category } = useParams();
-  const [products, setProducts] = useState([]);
+  // Obtiene la lista de productos
+  const items = useGetItem();
 
-  useEffect(() => {
-    new Promise((resolve) =>
-      setTimeout(() => {
-        resolve(Mock);
-      }, 1000)
-    ).then((data) => {
-      if (category) {
-        const categories = data.filter(
-          (product) => product.category === category
-        );
-        setProducts(categories);
-      } else {
-        setProducts(data);
-      }
-    });
-  }, [category]);
+  // Si aún no se han obtenido los productos, se muestra un mensaje de carga
+  if (!items) {
+    return <Loading />;
+  }
 
   return (
     <div>
-      <ItemList products={products} />
+      <ItemList products={items} />
     </div>
   );
 };
