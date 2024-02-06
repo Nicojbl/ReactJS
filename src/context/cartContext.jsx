@@ -30,26 +30,35 @@ export const CartContextProvider = ({ children }) => {
       );
     } else {
       // Si el producto no está en el carrito, lo agrega
-      setProductsAdded((prevState) =>
-        [...prevState, { item, quantityAdded: quantity }]
-      );
+      setProductsAdded((prevState) => [
+        ...prevState,
+        { item, quantityAdded: quantity },
+      ]);
     }
 
     // Actualiza el monto total
-    setTotalAmount((prevAmount) => prevAmount + (quantity * parseInt(item.price)));
+    setTotalAmount(
+      (prevAmount) => prevAmount + quantity * parseInt(item.price)
+    );
   };
 
   // función para eliminar un producto del carrito
   const removeItem = (itemId) => {
     // Busca el producto que queremos eliminar
-    const itemToRemove = productsAdded.find((product) => product.item.id === itemId);
+    const itemToRemove = productsAdded.find(
+      (product) => product.item.id === itemId
+    );
     // Obtiene su índice en el arreglo de productos agregados
     const index = productsAdded.indexOf(itemToRemove);
     // Elimina el producto del arreglo
     productsAdded.splice(index, 1);
 
     // Actualiza el monto total
-    setTotalAmount((prevAmount) => prevAmount - (itemToRemove.quantityAdded * parseInt(itemToRemove.item.price)));
+    setTotalAmount(
+      (prevAmount) =>
+        prevAmount -
+        itemToRemove.quantityAdded * parseInt(itemToRemove.item.price)
+    );
   };
 
   // Función para vaciar el carrito

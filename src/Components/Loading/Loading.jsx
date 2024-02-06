@@ -15,8 +15,8 @@ export const Loading = () => {
           r="45"
           stroke="#ccc"
           fill="none"
-          stroke-width="10"
-          stroke-dasharray="62.83185307179586 62.83185307179586"
+          strokeWidth="10"
+          strokeDasharray="62.83185307179586 62.83185307179586"
           transform="rotate(287.959 50 50)"
         >
           <animateTransform

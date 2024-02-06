@@ -38,7 +38,7 @@ const CartView = () => {
                 const quantityAdded = product.quantityAdded;
 
                 return (
-                  <div className="cartListItem">
+                  <div key={product.item.id} className="cartListItem">
                     <Item product={product.item} />
                     {/* Se muestra la cantidad de productos agregados y el botón para eliminar el producto del carrito */}
                     <div className="quantityAddedContainer">

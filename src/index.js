@@ -6,6 +6,8 @@ import { CartContextProvider } from "./context/cartContext";
 import { router } from "./router";
 import { initializeApp } from "firebase/app";
 import "./index.css";
+import dotenv from "dotenv"; 
+dotenv.config();
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,

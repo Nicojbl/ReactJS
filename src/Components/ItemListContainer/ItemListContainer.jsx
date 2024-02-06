@@ -6,7 +6,7 @@ import { Loading } from "../Loading/Loading";
 export const ItemListContainer = () => {
   // Obtiene la lista de productos
   const items = useGetItem();
-
+  
   // Si aún no se han obtenido los productos, se muestra un mensaje de carga
   if (!items) {
     return <Loading />;

@@ -3,9 +3,9 @@ import "./Footer.css";
 
 export const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="row">
-        <div class="footer-col">
+    <footer className="footer">
+      <div className="row">
+        <div className="footer-col">
           <h4>Compañia</h4>
           <ul>
             <li>
@@ -22,7 +22,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div className="footer-col">
           <h4>Help</h4>
           <ul>
             <li>
@@ -39,7 +39,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div className="footer-col">
           <h4>Compras online</h4>
           <ul>
             <li>
@@ -53,9 +53,9 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div className="footer-col">
           <h4>Siguenos</h4>
-          <div class="social-links">
+          <div className="social-links">
             <Link href="https://facebook.com" target="_blank">
               <svg
                 id="facebookEdit"
@@ -63,7 +63,7 @@ export const Footer = () => {
                 focusable="false"
                 data-prefix="fab"
                 data-icon="facebook"
-                class="svg-inline--fa fa-facebook fa-w-14"
+                className="svg-inline--fa fa-facebook fa-w-14"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -80,7 +80,7 @@ export const Footer = () => {
                 focusable="false"
                 data-prefix="fab"
                 data-icon="twitter"
-                class="svg-inline--fa fa-twitter fa-w-16"
+                className="svg-inline--fa fa-twitter fa-w-16"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -95,7 +95,7 @@ export const Footer = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
-                class="bi bi-instagram"
+                className="bi bi-instagram"
                 viewBox="0 0 16 16"
               >
                 {" "}

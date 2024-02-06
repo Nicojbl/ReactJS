@@ -39,9 +39,10 @@ const getItems = (db, category, id) => {
   }
 
   // si no se especificó ningún ID ni categoría, se recuperan todos los items
-  return getDocs(ref).then((result) =>
+  const items = getDocs(ref).then((result) =>
     result.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
   );
+  return items;
 };
 
 // función de custom hook que permite recuperar un item o varios items de la base de datos
@@ -51,7 +52,7 @@ export const useGetItem = () => {
   const { category, id } = useParams();
 
   const db = getFirestore();
-
+ 
   useEffect(() => {
     getItems(db, category, id).then(setData);
     // eslint-disable-next-line react-hooks/exhaustive-deps

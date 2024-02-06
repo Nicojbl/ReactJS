@@ -10,9 +10,22 @@ export const useGetItemImg = (productImg) => {
   const productImgRef = ref(storage, productImg);
 
   useEffect(() => {
-    getDownloadURL(productImgRef)
-      .then((data) => setImg(data))
-      .catch((err) => console.error({ err }));
+    const fetchImageURL = async () => {
+      try {
+        const data = await getDownloadURL(productImgRef);
+        setImg(data);
+      } catch (error) {
+        console.error("Error al obtener la URL de la imagen:", error);
+        // Puedes manejar el error de otra manera aquí, por ejemplo, lanzar una excepción
+      }
+    };
+
+    fetchImageURL();
+
+    // Limpiar el efecto si es necesario
+    // return () => {
+    //   // Código de limpieza
+    // };
   }, [productImgRef]);
 
   return img;

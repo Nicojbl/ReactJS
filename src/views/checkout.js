@@ -132,18 +132,18 @@ const CheckoutView = () => {
   return (
     <Layout>
       {/* Este es el formulario para finalizar la compra */}
-      <form onSubmit={handleFinalizePurchase} class="formContainer">
-        <div class="inputGroup">
+      <form onSubmit={handleFinalizePurchase} className="formContainer">
+        <div className="inputGroup">
           <input type="text" placeholder="Nombre Completo" required />
           <input type="number" placeholder="Numero de Telefono" required />
           <input type="email" placeholder="Email" required />
         </div>
         {/* Mostra el total a pagar */}
-        <span class="totalAmount">
+        <span className="totalAmount">
           Total a pagar: <strong>${totalAmount}</strong>
         </span>
         {/* Este es el botón para finalizar la compra */}
-        <button type="submit" class="finalizeButton" disabled={isLoading}>Finalizar</button>
+        <button type="submit" className="finalizeButton" disabled={isLoading}>Finalizar</button>
       </form>
     </Layout>
   );
